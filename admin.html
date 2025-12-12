@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Admin - Gerenciamento de Itens</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Tela Admin - Gerenciamento</h1>
+        <nav>
+            <a href="index.html" class="btn-secondary">← Voltar para o Início</a>
+            <button id="logoutBtn" class="btn-logout">Sair</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section class="admin-section">
+            <h2 id="formTitle">➕ Inserir Novo Item</h2> 
+            
+            <form id="cadastroForm" class="form"> 
+                <div class="form-group">
+                    <label for="nome">Nome do Item:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" name="descricao" rows="4" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="data_evento">Data (Opcional):</label>
+                    <input type="date" id="data_evento" name="data_evento">
+                </div>
+
+                <div class="form-group">
+                    <label for="hora_evento">Hora (Opcional):</label>
+                    <input type="time" id="hora_evento" name="hora_evento">
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo">Tipo:</label>
+                    <select id="tipo" name="tipo" required> 
+                        <option value="">Selecione o Tipo</option>
+                        <option value="Praia">Praia</option>
+                        <option value="Trilha">Trilha</option>
+                        <option value="Ponto Turístico">Ponto Turístico</option>
+                        <option value="Evento">Evento</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">Cadastrar Item</button>
+                
+                <p id="mensagem-cadastro" class="feedback-message"></p>
+            </form>
+        </section>
+
+        <hr>
+        
+        <section class="admin-section">
+            <h2>🗑️ Gerenciar e Excluir Itens</h2>
+            
+            <div id="lista-eventos-admin" class="listagem-container">
+                <p>Carregando itens...</p>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Saqua Verde. Painel Administrativo.</p>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>

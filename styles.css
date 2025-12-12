@@ -1,0 +1,383 @@
+/*
+ * Estilos Gerais
+ */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*
+ * Estilos do Header (Comum a index.html e admin.html)
+ */
+.header {
+    background-color: #00796B; /* Ciano-verde escuro */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-title {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.header nav {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões/links */
+    align-items: center;
+}
+
+.btn-admin, .btn-logout, .btn-secondary {
+    background-color: #004D40; /* Verde bem escuro */
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block; /* Garante que o link se comporte como botão */
+    text-align: center;
+}
+
+.btn-logout {
+    background-color: #D32F2F; /* Vermelho para o logout */
+}
+
+/* Estilo para o novo botão/link de retorno no admin */
+.btn-secondary {
+    background-color: #4CAF50; /* Verde mais claro para diferenciar */
+}
+
+.btn-admin:hover, .btn-secondary:hover {
+    background-color: #00897B;
+}
+
+.btn-logout:hover {
+    background-color: #FF5252;
+}
+
+
+/*
+ * Estilos da Tela Inicial (index.html)
+ */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h2 {
+    color: #00796B;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.btn-main {
+    display: inline-block;
+    background-color: #26A69A;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.btn-main:hover {
+    background-color: #00897B;
+}
+
+/*
+ * Estilos para a listagem de eventos (index.html)
+ * NOTA: Mantive a classe .atracoes-listagem e .card-atracao no CSS para não precisar
+ * alterar o HTML e JS, mas você pode renomeá-las se quiser (ex: .cards-eventos)
+ */
+.atracoes-listagem {
+    padding: 20px 0;
+}
+
+.atracoes-listagem h3 {
+    color: #004D40;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #B2DFDB;
+    padding-bottom: 10px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card-atracao {
+    background-color: #E0F2F1; /* Cor de fundo suave */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card-atracao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-atracao h3 {
+    color: #00796B;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.card-atracao p {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+
+/*
+ * Estilos do Footer (Comum)
+ */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/*
+ * Estilos da Tela de Login (login.html)
+ */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0f2f1; 
+}
+
+.login-container {
+    width: 100%;
+    max-width: 350px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.login-container h2 {
+    color: #00796B;
+    margin-bottom: 25px;
+}
+
+/*
+ * Estilos do Formulário (Comum a login.html e admin.html)
+ */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form textarea,
+.form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #00796B;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.btn-submit:hover {
+    background-color: #004D40;
+}
+
+.back-link {
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: #00796B;
+    text-decoration: none;
+}
+
+/*
+ * Estilos para Mensagens de Feedback (Admin/Login)
+ */
+.feedback-message {
+    margin-top: 10px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* As mensagens no JS agora usam .feedback-message e mudam a cor inline */
+.error-message {
+    color: #D32F2F;
+    background-color: #FFEBEE;
+}
+
+.success-message {
+    color: #004D40;
+    background-color: #E8F5E9;
+}
+
+
+/*
+ * Estilos da Tela Admin (admin.html)
+ */
+.admin-section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #B2DFDB;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+.admin-section h2 {
+    color: #26A69A;
+    border-bottom: 2px solid #E0F2F1;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/*
+ * Estilos para a Listagem de Admin e o Botão de Excluir
+ */
+.listagem-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card-atracao-admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.card-atracao-admin h4 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #00796B;
+}
+
+/* Container para alinhar os botões */
+.card-actions {
+    display: flex; 
+    gap: 8px; /* Espaço entre os botões */
+}
+
+/* Botão de EDIÇÃO */
+.btn-editar {
+    background-color: #FFA000; /* Laranja/Amarelo para Edição */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.btn-editar:hover {
+    background-color: #FFC107;
+}
+
+.btn-excluir {
+    background-color: #D32F2F;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.btn-excluir:hover {
+    background-color: #FF5252;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header nav {
+        margin-top: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .container {
+        margin: 10px;
+        padding: 10px;
+    }
+    .card-atracao-admin {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .card-atracao-admin h4 {
+        margin-bottom: 5px;
+    }
+    /* Ajusta a barra de ações para preencher a largura */
+    .card-actions {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .btn-editar, .btn-excluir {
+        flex-grow: 1; /* Faz os botões dividirem o espaço */
+        text-align: center;
+    }
+}
